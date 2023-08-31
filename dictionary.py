@@ -41,15 +41,3 @@ def random_word():
 	import random
 	rd = dictionary[letters[random.randint(1,26)]].return_dict()
 	return random.choice(list(rd.items()))
-
-def new_user_dict(name):
-	pass
-
-def append_to_user_dict(name, word):
-	pass
-
-def remove_from_user_dict(name, word):
-	pass
-
-def display_user_dict(name):
-	pass
