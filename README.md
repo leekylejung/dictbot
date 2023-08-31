@@ -1,0 +1,2 @@
+# Dictbot
+ Dictionary bot 
