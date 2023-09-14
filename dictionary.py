@@ -1,6 +1,7 @@
 letters = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.lower().split()
 
-def hash_dictionary(letter):
+#processes dictionary such that it is scannable; filters for secondary definitions
+def process_dictionary(letter):
 	dictionary = {}
 
 	temp = open('Dictionary\\{}.csv'.format(letter), 'r').readlines()
@@ -17,6 +18,7 @@ def hash_dictionary(letter):
 
 	return dictionary
 
+#future methods may include personalized dictionaries, random word lists, etc
 class l_dictionary:
 	def __init__(self, l_dict):
 		self.l_dict = l_dict
@@ -27,9 +29,10 @@ class l_dictionary:
 	def return_dict(self):
 		return(self.l_dict)
 
+#dictionary object and functions
 dictionary = {}
 for letter in letters:
-	dictionary[letter] = l_dictionary(l_dict=hash_dictionary(letter))
+	dictionary[letter] = l_dictionary(l_dict=process_dictionary(letter))
 
 def get_definition(word):
 	try:
